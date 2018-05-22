@@ -1,10 +1,10 @@
 /* styles in src/style directory are applied to the whole page */
 body {
-  background: #0147A7;
-  color: #fff;
+  background: #e6e6ff;
+  /* color: #fff; */
 }
 
-a {
+/* a {
   color: #03A9F4;
 }
 
@@ -19,4 +19,4 @@ main {
 footer {
   text-align: center;
   font-size: 0.8em;
-}
+} */

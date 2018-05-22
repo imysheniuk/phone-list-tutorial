@@ -1,19 +1,15 @@
 import angular from 'angular';
+import uiRouter from 'angular-ui-router';
+
 
 import './App.css';
 import './components';
+
+import './common';
 // import './config';
 import AppCmp from './AppCmp';
 
-angular.module('app', ['app.components'])
-.component('app', new AppCmp());
+import test from './common/Config';
 
-// import angular from 'angular';
-
-// import './App.css';
-// import './components';
-// import './config';
-// import AppCmp from './AppCmp';
-
-// angular.module('app', ['app.components', 'app.config'])
-// .component('app', new AppCmp());
+angular.module('app', ['app.components', 'app.common', 'ui.router'])
+.component('app', new AppCmp()).config(test);
