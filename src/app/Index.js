@@ -1,15 +1,13 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
-
+//todo: figure out how to import styles inside .css files
+import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 
 import './App.css';
 import './components';
 
 import './common';
-// import './config';
 import AppCmp from './AppCmp';
 
-import test from './common/Config';
-
-angular.module('app', ['app.components', 'app.common', 'ui.router'])
-.component('app', new AppCmp()).config(test);
+angular.module('app', ['ui.router', 'app.components', 'app.common'])
+.component('app', new AppCmp());

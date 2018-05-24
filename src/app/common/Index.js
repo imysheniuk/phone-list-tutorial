@@ -1,13 +1,8 @@
 import PhoneService from './PhoneService';
-import StateProvider from './Config';
+import RouterConfig from './RouterConfig';
 import CheckmarkFilter from './CheckmarkFilter';
 
 angular.module('app.common', [])
+       .config(RouterConfig)
        .service('PhoneSrv', PhoneService)
-       //create CheckmarkFilter class
-       .filter('CheckmarkFilter', /*CheckmarkFilter*/
-       function() {
-            return function(input) {
-            return input ? '\u2713' : '\u2718';
-            };
-        });
+       .filter('CheckmarkFilter', CheckmarkFilter);

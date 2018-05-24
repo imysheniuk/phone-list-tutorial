@@ -1,0 +1,6 @@
+<a href="#/phones/{{phone.id}}" class="thumb">
+    <img ng-src="{{$ctrl.phone.imageUrl}}" alt="{{$ctrl.phone.name}}" />
+</a>
+<a ui-sref="phoneDetails({phoneId: $ctrl.phone.id})">{{$ctrl.phone.name}}</a>
+<p>{{$ctrl.phone.snippet}}</p>
+<button ng-click="$ctrl.onDelete({item: $ctrl.phone})" class="delete_btn">Delete</button>

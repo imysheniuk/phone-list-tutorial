@@ -5,5 +5,8 @@ export default class PhoneDetailsCmp {
     constructor () {
         this.controller = PhoneDetailsCtrl;
         this.template = require('./PhoneDetails.html');
+        this.bindings = {
+            phone: '<'
+        }
     }
 }
